@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>销售订单</title>
+        <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div>
+        <div>
+            <div>
+                <ul class="nav nav-tabs">
+                    <li role="presentation"><a href="home">主页</a></li>
+                    <li role="presentation"><a href="sell">卖东西</a></li>
+                    <li role="presentation"><a href="listgoods">买东西</a></li>
+                    <li role="presentation" class="active"><a href="sellorder">销售订单</a></li>
+                    <li role="presentation"><a href="buyorder">购买订单</a></li>
+                    <p class="navbar-text"><a href="logout" class="navbar-link">注销</a></p>
+                </ul>
+            </div>
+            <div>
+                <table class="table">
+                    <tr>
+                        <td><div>订单号</div></td>
+                        <td><div>商品名称</div></td>
+                        <td><div>地址信息</div></td>
+                        <td><div>快递信息</div></td>
+                        <td><div>付款信息</div></td>
+                        <td><div>下单时间</div></td>
+                    </tr>
+                    {{range .Items}}
+                    <tr>
+                        <td><div>{{.Id}}</div></td>
+                        <td><div><a href="goodsinfo?id={{.Goods_id}}">{{.Name}}</a></div></td>
+                        <td><div>{{.Address | address_show}}</div></td>
+                        <td><div>{{.Express | express_show}}</div></td>
+                        <td><div>{{.Pay | pay_show}}</div></td>
+                        <td><div>{{.Time | timeTrans_gi}}</div></td>
+                    </tr>
+                    {{end}}
+                </table>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

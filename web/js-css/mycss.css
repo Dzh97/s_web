@@ -1,0 +1,91 @@
+            .myinput{
+                margin-top: 5px;
+                width: 320px;
+                height: 30px;
+            }
+            .introduce{
+                margin-top: 5px;
+                width: 320px;
+                height: 150px;
+            }
+            .mybutton{
+                color:white;
+                background-color:darkturquoise;
+                margin-top: 5px;
+                width: 320px;
+                height: 30px;
+            }
+            .pos-center{
+                position: absolute;
+                left: 50%;     
+                transform: translate(-50%,0);   
+            }
+
+            .div1{
+                background-color:white;
+                position: absolute;
+                opacity: 0.9;
+                top:30%;
+                right: 18%;
+                width: 400;
+                height: 300;
+                border-radius: 20px;
+            }
+            .div2{
+                background-color:aquamarine;
+                position: absolute;
+                opacity: 0.6;
+                top:35%;
+                left: 0%;
+                width: 100%;
+                height: 200;
+            }
+            .myinput{
+                margin-top: 5px;
+                width: 320px;
+                height: 30px;
+            }
+            .mybutton{
+                color:white;
+                background-color:darkturquoise;
+                margin-top: 5px;
+                width: 320px;
+                height: 30px;
+            }
+            .myword{
+                text-decoration: none;
+                font-size: 15px;
+                color: black;
+            }
+            .headline{
+                position: relative;
+                font-size: 100px;
+                top:23px;
+                left: 200px;
+                margin: 0;
+            }
+.goods-in-list{
+    display: block;
+    position: float;
+    float: left;
+    border:10px;
+    border-radius: 5px;
+    border-color:cornflowerblue;
+    margin: 5px;
+    width: 320px;
+    height: 360px;
+}
+
+.pic-in-list{
+    width: 300px;
+    height: 300px;
+}
+
+.button-buy{
+    color:white;
+    background-color:coral;
+    margin-top: 5px;
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+}
